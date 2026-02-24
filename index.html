@@ -16,7 +16,9 @@
 
     <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         * {
@@ -36,17 +38,17 @@
         <div class="grid grid-cols-3 gap-8">
             <div id="card" class="p-4 bg-white rounded-lg">
                 <p>Total</p>
-                <p>0</p>
+                <p id="total">0</p>
             </div>
 
             <div id="card" class="p-4 bg-white rounded-lg">
                 <p>Interview</p>
-                <p class="text-green-500">0</p>
+                <p id="interview" class="text-green-500">0</p>
             </div>
 
             <div id="card" class="p-4 bg-white rounded-lg">
                 <p>Rejected</p>
-                <p class="text-red-500">0</p>
+                <p id="rejected" class="text-red-500">0</p>
             </div>
         </div>
 
@@ -63,12 +65,12 @@
         </div>
 
         <div>
-            <button class="btn bg-blue-600 mb-6">All</button>
-            <button class="btn mb-6">Interview</button>
-            <button class="btn mb-6">Rejected</button>
+            <button id="All" class="btn bg-blue-600 text-white mb-6">All</button>
+            <button id="Interview" class="btn mb-6">Interview</button>
+            <button id="Rejected" class="btn mb-6">Rejected</button>
         </div>
 
-        <section>
+        <section id="allCards">
 
             <!-- card 1 -->
             <div class="card1 flex justify-between p-8 rounded-2xl bg-white">
@@ -82,14 +84,17 @@
                     <div>
                         <p>Remote • Full-time • $130,000 - $175,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Build cross-platform mobile applications using React Native. Work on products used by
+                            millions of users worldwide.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -99,25 +104,28 @@
             </div>
 
             <!-- card 2 -->
-            <div class="card1 flex justify-between p-8 rounded-2xl mt-4 bg-white" >
+            <div class="card1 flex justify-between p-8 rounded-2xl mt-4 bg-white">
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">WebFlow Agency</p>
+                        <p>Web Designer & Developer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience
+                            with modern web design trends.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -131,21 +139,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">DataViz Solutions</p>
+                        <p>Data Visualization Specialist</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>Boston, MA • Full-time • $125,000 - $165,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -159,21 +169,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">CloudFirst Inc</p>
+                        <p>Backend Developer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>Seattle, WA • Full-time • $140,000 - $190,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -187,21 +199,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">Innovation Labs</p>
+                        <p>UI/UX Engineer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>Austin, TX • Full-time • $110,000 - $150,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -215,21 +229,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">MegaCorp Solutions</p>
+                        <p>JavaScript Developer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>New York, NY • Full-time • $130,000 - $170,00</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -243,21 +259,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">StartupXYZ</p>
+                        <p>Full Stack Engineer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>Remote • Full-time • $120,000 - $160,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -271,21 +289,23 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="text-.5xl font-bold">TechCorp Industries</p>
+                        <p>Senior Frontend Developer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p>San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     </div>
-                    
+
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied</p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        </p>
+                        <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
-                        
+
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button
+                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
@@ -294,10 +314,10 @@
                 <div><i class="fa-regular fa-trash-can"></i></div>
             </div>
 
-            <div class="bg-zinc-100 h-[30px] "></div>
 
         </section>
 
+        <div class="bg-zinc-100 h-[30px] "></div>
 
     </main>
 
