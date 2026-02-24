@@ -65,9 +65,13 @@
         </div>
 
         <div>
-            <button id="All" class="btn bg-blue-600 text-white mb-6">All</button>
-            <button id="Interview" class="btn mb-6">Interview</button>
-            <button id="Rejected" class="btn mb-6">Rejected</button>
+
+            <button onclick="toggle('all-Button')" id="all-Button" class="btn bg-blue-600 text-white mb-6">All</button>
+
+            <button onclick="toggle('interview-Button')" id="interview-Button" class="btn mb-6 text-gray-500">Interview</button>
+
+            <button onclick="toggle('rejected-Button')" id="rejected-Button" class="btn mb-6 text-gray-500">Rejected</button>
+
         </div>
 
         <section id="allCards">
