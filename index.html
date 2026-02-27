@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="bg-zinc-100">
+<body class="min-h-screen bg-zinc-100">
 
     <!-- header -->
     <header id="JobApplicationTracker" class="w-[80%] mx-auto pt-14">
@@ -61,18 +61,25 @@
 
         <div class="flex justify-between mb-4">
             <h1 class="text-xl font-bold">Available Jobs</h1>
-            <p>0 jobs</p>
+            <p><span id="total-Jobs">0</span> jobs</p>
         </div>
 
         <div>
 
             <button onclick="toggle('all-Button')" id="all-Button" class="btn bg-blue-600 text-white mb-6">All</button>
 
-            <button onclick="toggle('interview-Button')" id="interview-Button" class="btn mb-6 text-gray-500">Interview</button>
+            <button onclick="toggle('interview-Button')" id="interview-Button"
+                class="btn mb-6 text-gray-500">Interview</button>
 
-            <button onclick="toggle('rejected-Button')" id="rejected-Button" class="btn mb-6 text-gray-500">Rejected</button>
+            <button onclick="toggle('rejected-Button')" id="rejected-Button"
+                class="btn mb-6 text-gray-500">Rejected</button>
 
         </div>
+
+        <!-- Interview -->
+         <section id="Interview-Filtered" class="hidden">
+
+         </section>
 
         <section id="allCards">
 
@@ -81,30 +88,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Mobile First Corp</p>
-                        <p>React Native Developer</p>
+                        <p class="A text-.5xl font-bold">Mobile First Corp</p>
+                        <p class="B">React Native Developer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="C">Remote • Full-time • $130,000 - $175,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by
+                        <p class="E">Build cross-platform mobile applications using React Native. Work on products used by
                             millions of users worldwide.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 2 -->
@@ -112,30 +118,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">WebFlow Agency</p>
-                        <p>Web Designer & Developer</p>
+                        <p class="A text-.5xl font-bold">WebFlow Agency</p>
+                        <p class="B">Web Designer & Developer</p>
                     </div>
 
                     <div>
-                        <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                        <p class="C">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience
+                        <p class="E">Create stunning web experiences for high-profile clients. Must have portfolio and experience
                             with modern web design trends.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 3 -->
@@ -143,29 +148,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">DataViz Solutions</p>
-                        <p>Data Visualization Specialist</p>
+                        <p class="A text-.5xl font-bold">DataViz Solutions</p>
+                        <p class="B">Data Visualization Specialist</p>
                     </div>
 
                     <div>
-                        <p>Boston, MA • Full-time • $125,000 - $165,000</p>
+                        <p class="C">Boston, MA • Full-time • $125,000 - $165,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                        <p class="E">Transform complex data into compelling visualizations. Required skills: D3.js, React, and
+                            strong analytical thinking.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 4 -->
@@ -173,29 +178,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">CloudFirst Inc</p>
-                        <p>Backend Developer</p>
+                        <p class="A text-.5xl font-bold">CloudFirst Inc</p>
+                        <p class="B">Backend Developer</p>
                     </div>
 
                     <div>
-                        <p>Seattle, WA • Full-time • $140,000 - $190,000</p>
+                        <p class="C">Seattle, WA • Full-time • $140,000 - $190,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        <p class="E">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps
+                            practices and cloud infrastructure.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 5 -->
@@ -203,29 +208,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">Innovation Labs</p>
-                        <p>UI/UX Engineer</p>
+                        <p class="A text-.5xl font-bold">Innovation Labs</p>
+                        <p class="B">UI/UX Engineer</p>
                     </div>
 
                     <div>
-                        <p>Austin, TX • Full-time • $110,000 - $150,000</p>
+                        <p class="C">Austin, TX • Full-time • $110,000 - $150,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                        <p class="E">Create beautiful and functional user interfaces for our suite of products. Strong design
+                            skills and frontend development expertise required.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 6 -->
@@ -233,29 +238,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">MegaCorp Solutions</p>
-                        <p>JavaScript Developer</p>
+                        <p class="A text-.5xl font-bold">MegaCorp Solutions</p>
+                        <p class="B">JavaScript Developer</p>
                     </div>
 
                     <div>
-                        <p>New York, NY • Full-time • $130,000 - $170,00</p>
+                        <p class="C">New York, NY • Full-time • $130,000 - $170,00</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                        <p class="E">Build enterprise applications with JavaScript and modern frameworks. We offer competitive
+                            compensation, health insurance, and professional development opportunities.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 7 -->
@@ -263,29 +268,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">StartupXYZ</p>
-                        <p>Full Stack Engineer</p>
+                        <p class="A text-.5xl font-bold">StartupXYZ</p>
+                        <p class="B">Full Stack Engineer</p>
                     </div>
 
                     <div>
-                        <p>Remote • Full-time • $120,000 - $160,000</p>
+                        <p class="C">Remote • Full-time • $120,000 - $160,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                        <p class="E">Join our fast-growing startup and work on our core platform. Experience with Node.js and
+                            React required. Great benefits and equity package included.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
             <!-- card 8 -->
@@ -293,29 +298,29 @@
                 <!-- 1 -->
                 <div class="space-y-6">
                     <div>
-                        <p class="text-.5xl font-bold">TechCorp Industries</p>
-                        <p>Senior Frontend Developer</p>
+                        <p class="A text-.5xl font-bold">TechCorp Industries</p>
+                        <p class="B">Senior Frontend Developer</p>
                     </div>
 
                     <div>
-                        <p>San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                        <p class="C">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     </div>
 
                     <div>
-                        <p class="bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">Not Applied
                         </p>
-                        <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                        <p class="E">We are looking for an experienced Frontend Developer to build scalable web applications using
+                            React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
 
                     <div>
-                        <button
-                            class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
                         <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
             </div>
 
 
