@@ -23,6 +23,7 @@ let interviewButton = document.getElementById('interview-Button');
 let rejectedButton = document.getElementById('rejected-Button');
 
 let InterviewFiltered = document.getElementById('Interview-Filtered');
+// let RejectedFiltered = document.getElementById('Rejected-Filtered');
 
 
 function count() {
@@ -61,6 +62,11 @@ function toggle(id) {
         allCardsSection.classList.remove('hidden');
         InterviewFiltered.classList.add('hidden');
     }
+    // else if(id == 'Rejected-Filtered'){
+    //     allCardsSection.classList.add('hidden');
+    //     InterviewFiltered.classList.add('hidden');
+    //     RejectedFiltered.classList.remove('hidden');
+    // }
 
 }
 
@@ -102,6 +108,8 @@ mainContainer.addEventListener('click', function (event) {
         if (!AAexist) {
             InterviewList.push(cardInfo);
         }
+
+        count();
 
         render()
 
