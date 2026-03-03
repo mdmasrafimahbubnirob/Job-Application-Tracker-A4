@@ -1,6 +1,8 @@
 let InterviewList = [];
 let RejectedList = [];
 
+let current ='all';
+
 let Total = document.getElementById('total');
 let InterviewCount = document.getElementById('interview');
 let RejectedCount = document.getElementById('rejected');
@@ -49,7 +51,13 @@ function toggle(id) {
     interviewButton.classList.add('bg-white', 'text-gray-500');
     rejectedButton.classList.add('bg-white', 'text-gray-500');
 
+    // console.log(id);
+
     let selected = document.getElementById(id);
+
+    current=id;
+
+    // console.log(selected);
 
     selected.classList.remove('bg-white', 'text-gray-500');
     selected.classList.add('bg-blue-600', 'text-white');
@@ -57,21 +65,23 @@ function toggle(id) {
     if (id == 'interview-Button') {
         allCardsSection.classList.add('hidden');
         InterviewFiltered.classList.remove('hidden');
+        render();
     }
     else if (id == 'all-Button') {
         allCardsSection.classList.remove('hidden');
         InterviewFiltered.classList.add('hidden');
     }
-    // else if(id == 'Rejected-Filtered'){
-    //     allCardsSection.classList.add('hidden');
-    //     InterviewFiltered.classList.add('hidden');
-    //     RejectedFiltered.classList.remove('hidden');
-    // }
+    else if (id == 'rejected-Button') {
+        allCardsSection.classList.add('hidden');
+        InterviewFiltered.classList.remove('hidden');
+        // RejectedFiltered.classList.remove('hidden');
+        renderRejected();
+    }
 
 }
 
 mainContainer.addEventListener('click', function (event) {
-    console.log(event.target.classList.contains('intervw'));
+    // console.log(event.target.classList.contains('intervw'));
 
     if (event.target.classList.contains('intervw')) {
 
@@ -93,13 +103,13 @@ mainContainer.addEventListener('click', function (event) {
         // parentNode.querySelector('.D').innerHTML = `
         // <p class="intervw bg-green-200 text-green-500 border-green-600 rounded-xl">INTERVIEW</p>
         // `;
-        parentNode.querySelector('.D').innerText= 'INTERVIEW';
+        parentNode.querySelector('.D').innerText = 'INTERVIEW';
 
         let cardInfo = {
             A,
             B,
             C,
-            D:'INTERVIEW',
+            D: 'INTERVIEW',
             E
         }
 
@@ -109,9 +119,65 @@ mainContainer.addEventListener('click', function (event) {
             InterviewList.push(cardInfo);
         }
 
+        RejectedList = RejectedList.filter(item => item.A != cardInfo.A)
+
         count();
 
-        render()
+        if(current == "rejected-Button"){
+            renderRejected();
+        }
+
+        // render();
+
+        // console.log(InterviewList);
+
+    }
+    else if (event.target.classList.contains('rejected')) {
+
+        // console.log(event.target.parentNode.parentNode);
+        let parentNode = event.target.parentNode.parentNode;
+        let A = parentNode.querySelector('.A').innerText;
+        let B = parentNode.querySelector('.B').innerText;
+        let C = parentNode.querySelector('.C').innerText;
+        let D = parentNode.querySelector('.D').innerText;
+        let E = parentNode.querySelector('.E').innerText;
+
+        // console.log(A);
+        // console.log(B);
+        // console.log(C);
+        // console.log(D);
+        // console.log(E);
+
+        // parentNode.querySelector('.D').classList.remove('bg-gray-300');
+        // parentNode.querySelector('.D').innerHTML = `
+        // <p class="intervw bg-green-200 text-green-500 border-green-600 rounded-xl">INTERVIEW</p>
+        // `;
+        parentNode.querySelector('.D').innerText = 'REJECTED';
+
+        let cardInfo = {
+            A,
+            B,
+            C,
+            D: 'REJECTED',
+            E
+        }
+
+        let AAexist = RejectedList.find(item => item.A == cardInfo.A)
+
+        if (!AAexist) {
+            RejectedList.push(cardInfo);
+        }
+
+        InterviewList = InterviewList.filter(item => item.A != cardInfo.A)
+
+
+        if(current == "interview-Button"){
+            render(); //rederInterview
+        }
+
+        count();
+
+        // renderRejected();
 
         // console.log(InterviewList);
 
@@ -122,7 +188,8 @@ function render() {
     InterviewFiltered.innerHTML = '';
 
     for (let inter of InterviewList) {
-        console.log(inter);
+        // console.log(inter);
+
         let div = document.createElement('div');
         div.className = 'card1 flex justify-between p-8 rounded-2xl bg-white mb-4';
         div.innerHTML = `
@@ -144,13 +211,56 @@ function render() {
                     </div>
 
                     <div>
-                        <button class="btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
-                        <button class="btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="rejected btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
                     </div>
                 </div>
 
                 <!-- 2 -->
-                <div><i class="fa-regular fa-trash-can"></i></div>
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
+        
+        `
+        InterviewFiltered.appendChild(div);
+    }
+}
+
+// console.log(D);
+
+function renderRejected() {
+    InterviewFiltered.innerHTML = '';
+
+    for (let Reject of RejectedList) {
+
+        // console.log(D);
+
+        let div = document.createElement('div');
+        div.className = 'card1 flex justify-between p-8 rounded-2xl bg-white mb-4';
+        div.innerHTML = `
+        <!-- 1 -->
+                <div class="space-y-6">
+                    <div>
+                        <p class="A text-.5xl font-bold">${Reject.A}</p>
+                        <p class="B">${Reject.B}</p>
+                    </div>
+
+                    <div>
+                        <p class="C">${Reject.C}</p>
+                    </div>
+
+                    <div>
+                        <p class="D bg-gray-300 w-[100px] h-[30px] content-center text-center rounded-[5px]">${Reject.D}
+                        </p>
+                        <p class="E">${Reject.E}</p>
+                    </div>
+
+                    <div>
+                        <button class="intervw btn bg-white text-green-500 border-green-600 hover:bg-gray-300">INTERVIEW</button>
+                        <button class="rejected btn bg-white text-red-500 border-red-600 hover:bg-gray-300">REJECTED</button>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div><i class="fa-regular fa-trash-can cursor-pointer hover:text-red-500"></i></div>
         
         `
         InterviewFiltered.appendChild(div);
