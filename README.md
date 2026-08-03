@@ -8,8 +8,7 @@ A clean, intuitive, and responsive web application designed to help job seekers 
 
 ## 📸 Preview
 
-![Job Application Tracker Screenshot](https://via.placeholder.com/800x450.png?text=Job+Application+Tracker+Preview)
-*(Note: Replace the link above with an actual screenshot/GIF of your project)*
+![Job Application Tracker Screenshot](https://github.com/mdmasrafimahbubnirob/Job-Application-Tracker-A4/blob/main/ss/Screenshot%202026-08-03%20175129.jpg)
 
 ---
 
@@ -44,13 +43,41 @@ The **Job Application Tracker** simplifies the job hunting process by allowing u
 
 ## 🚀 How to Run Locally
 
-To get a local copy up and running, follow these simple steps:
+You can run this project on your local machine in a few simple steps. Follow any of the options below:
 
 ### Prerequisites
-Make sure you have a modern web browser installed (e.g., Google Chrome, Mozilla Firefox).
+- A modern web browser (Google Chrome, Firefox, Microsoft Edge, Brave, etc.)
+- Git installed on your machine (Optional)
+- VS Code editor (Recommended)
 
-### Installation Steps
+---
+
+### Option 1: Using VS Code Live Server (Recommended)
 
 1. **Clone the repository:**
+   Open your terminal/command prompt and run:
    ```bash
    git clone https://github.com/mdmasrafimahbubnirob/Job-Application-Tracker-A4.git
+
+2. **Navigate into the project folder:**
+   ```bash
+   cd Job-Application-Tracker-A4
+
+3. **Open the project in VS Code:**
+   ```bash
+   code .
+
+3. **Launch Live Server:**  
+   * Install the Live Server extension in VS Code (if not already installed).  
+   * Right-click on the index.html file and click "Open with Live Server".  
+   * Your default browser will open automatically with the live preview!
+
+### Option 2: Direct Launch in Browser (Without Git / Terminal)
+   1. Download ZIP: Go to the GitHub repository page, click the green Code button, and select Download ZIP.
+   2. Extract: Unzip/extract the downloaded file to your desired folder.
+   3. Open: Go into the extracted folder and double-click the index.html file to open it directly in any web browser.
+
+### 🔗 Links & Resources
+🌐 Live Website: https://mdmasrafimahbubnirob.github.io/Job-Application-Tracker-A4/  
+📁 GitHub Repository: https://github.com/mdmasrafimahbubnirob/Job-Application-Tracker-A4  
+💡 Developed by Md. Masrafi Mahbub Nirob
